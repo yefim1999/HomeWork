@@ -1,0 +1,29 @@
+<html>
+<body>
+<div>
+<div>Add an employee</div>
+    <form method="post" action="/">
+        <input type="text" name="fio" placeholder="Enter a FIO">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>List of employees</div>
+{{#employees}}
+    <div>
+        <b>{{employee_id}}</b>
+        <span>{{FIO}}</span>
+    </div>
+{{/employees}}
+<div>Find employees by FIO</div>
+<form method="post" action="filter">
+    <input type="text" name="tofindfio" placeholder="Enter a FIO">
+    <button type="submit">Find</button>
+</form>
+{{#findemployees}}
+    <div>
+        <b>{{employee_id}}</b>
+        <span>{{FIO}}</span>
+    </div>
+{{/findemployees}}
+</body>
+</html>
